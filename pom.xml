@@ -94,10 +94,10 @@
 
     <build>
         <finalName>Mirella</finalName>
-        <sourceDirectory>src/java</sourceDirectory>
+        <!-- Maven sẽ tự động sử dụng src/main/java -->
         <resources>
             <resource>
-                <directory>src/conf</directory>
+                <directory>src/main/resources</directory>
                 <targetPath>WEB-INF/classes</targetPath>
             </resource>
         </resources>
@@ -121,7 +121,7 @@
                 <artifactId>maven-war-plugin</artifactId>
                 <version>3.4.0</version>
                 <configuration>
-                    <warSourceDirectory>web</warSourceDirectory>
+                    <warSourceDirectory>src/main/webapp</warSourceDirectory>
                     <failOnMissingWebXml>false</failOnMissingWebXml>
                 </configuration>
             </plugin>
