@@ -1,0 +1,43 @@
+# Azure Web App Configuration
+# File này chứa cấu hình cho Azure Web App deployment
+
+# App Service Configuration
+appName: nongsan-webapp
+resourceGroup: nongsan-resource-group
+location: East US
+pricingTier: P1V2
+
+# Runtime Configuration
+runtime:
+  os: Linux
+  javaVersion: Java 17
+  webContainer: Tomcat 10.0
+
+# Application Settings
+appSettings:
+  - name: DB_SERVER
+    value: nongsanserver.database.windows.net
+  - name: DB_NAME
+    value: nongsandb
+  - name: DB_USER
+    value: saadmin
+  - name: DB_PASSWORD
+    value: Sawadmin123@
+  - name: DB_PORT
+    value: 1433
+  - name: JAVA_OPTS
+    value: -Xms512m -Xmx1024m
+  - name: WEBSITES_ENABLE_APP_SERVICE_STORAGE
+    value: false
+
+# Connection Strings
+connectionStrings:
+  - name: DefaultConnection
+    connectionString: Server=nongsanserver.database.windows.net;Database=nongsandb;User Id=saadmin;Password=Sawadmin123@;Encrypt=true;TrustServerCertificate=false;Connection Timeout=30;
+    type: SQLServer
+
+# Deployment Configuration
+deployment:
+  type: war
+  artifactPath: target/Mirella.war
+  startupCommand: 
