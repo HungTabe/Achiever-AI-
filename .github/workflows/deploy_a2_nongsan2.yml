@@ -29,16 +29,51 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y ant
 
-      - name: Download NetBeans CopyLibs
+      - name: Create custom build script
         run: |
-          mkdir -p netbeans-libs
-          wget -O netbeans-libs/copylibstask.jar https://repo1.maven.org/maven2/org/netbeans/modules/org-netbeans-modules-java-j2seproject-copylibstask/RELEASE200/org-netbeans-modules-java-j2seproject-copylibstask-RELEASE200.jar
+          cat > custom-build.xml << 'EOF'
+          <?xml version="1.0" encoding="UTF-8"?>
+          <project name="CustomBuild" default="build-war" basedir=".">
+            <property name="src.dir" value="src/java"/>
+            <property name="web.dir" value="web"/>
+            <property name="build.dir" value="build"/>
+            <property name="classes.dir" value="${build.dir}/classes"/>
+            <property name="dist.dir" value="dist"/>
+            <property name="war.name" value="Mirella.war"/>
+            
+            <target name="clean">
+              <delete dir="${build.dir}"/>
+              <delete dir="${dist.dir}"/>
+            </target>
+            
+            <target name="init">
+              <mkdir dir="${build.dir}"/>
+              <mkdir dir="${classes.dir}"/>
+              <mkdir dir="${dist.dir}"/>
+            </target>
+            
+            <target name="compile" depends="init">
+              <javac srcdir="${src.dir}" destdir="${classes.dir}" 
+                     classpath="${web.dir}/WEB-INF/lib/*" 
+                     includeantruntime="false" 
+                     source="17" target="17"/>
+            </target>
+            
+            <target name="build-war" depends="compile">
+              <war destfile="${dist.dir}/${war.name}" webxml="${web.dir}/WEB-INF/web.xml">
+                <fileset dir="${web.dir}"/>
+                <classes dir="${classes.dir}"/>
+                <lib dir="${web.dir}/WEB-INF/lib"/>
+              </war>
+            </target>
+          </project>
+          EOF
 
-      - name: Build with Ant
+      - name: Build with custom Ant script
         run: |
           cd "${{ github.workspace }}"
-          ant -Dlibs.CopyLibs.classpath=netbeans-libs/copylibstask.jar clean
-          ant -Dlibs.CopyLibs.classpath=netbeans-libs/copylibstask.jar dist
+          ant -f custom-build.xml clean
+          ant -f custom-build.xml build-war
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
