@@ -29,11 +29,16 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y ant
 
+      - name: Download NetBeans CopyLibs
+        run: |
+          mkdir -p netbeans-libs
+          wget -O netbeans-libs/copylibstask.jar https://repo1.maven.org/maven2/org/netbeans/modules/org-netbeans-modules-java-j2seproject-copylibstask/RELEASE200/org-netbeans-modules-java-j2seproject-copylibstask-RELEASE200.jar
+
       - name: Build with Ant
         run: |
           cd "${{ github.workspace }}"
-          ant clean
-          ant dist
+          ant -Dlibs.CopyLibs.classpath=netbeans-libs/copylibstask.jar clean
+          ant -Dlibs.CopyLibs.classpath=netbeans-libs/copylibstask.jar dist
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
