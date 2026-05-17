@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net">
   <diagram name="Trang-1" id="99K3k6i0hp_J4AZAw7qn">
-    <mxGraphModel dx="1015" dy="963" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="836" dy="638" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -18,6 +18,15 @@
         </mxCell>
         <mxCell id="Hifaieis5Mk0LkOP5z_K-3" parent="1" style="whiteSpace=wrap;html=1;rounded=1;align=center;" value="&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;TRƯỚC MẮT LÀ LÀM BÀI TẬP&amp;nbsp;&lt;/span&gt;&lt;br&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;ol&gt;&lt;li&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Phải lấy được quyết định từ UBND các cấp về phân định vấn đề đó&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Tránh tự ý đập gây tội phá hoại&amp;nbsp;&lt;br&gt;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;Quy trình : Yêu cầu địa chính xuống căm móc phân ranh xác định lại vị trí ranh đất theo sổ đỏ nhà mình với nhà thực tế để check việc can thiệp của hàng xóm có đụng tới diện tích đất nhà mình hay không - Nếu có thì&amp;nbsp;&lt;br&gt;&lt;/li&gt;&lt;li&gt;Gửi 1 cái đơn hòa giải tranh chấp ra ủy bản nhân dân cấp phường nơi có đất này để hòa giải tranh chấp&lt;br&gt;&lt;/li&gt;&lt;li&gt;Thường 2 lần hòa giải , Nếu không thành thì phải lấy được bản hòa giải không thành&amp;nbsp;&lt;br&gt;&lt;/li&gt;&lt;li&gt;Có rồi thì soạn đơn khởi kiện ra tòa án nhân dân cấp phường nơi có đất này - đề nghị tòa tuyên người lấn chiếm phải có trách nhiệm giao trả lại phần diện tích đã lấn chiếm và tháo dở công trình trên phần đất ấy&lt;br&gt;&lt;/li&gt;&lt;li&gt;Khi có bản án rồi thì nộp ra cơ quan thi hành án của tòa để tiến hành cưỡng chế xử lý&lt;/li&gt;&lt;/ol&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="325" width="380" x="600" y="75" as="geometry" />
+        </mxCell>
+        <mxCell id="_D-FjPjcb8cLJCChwa4u-3" edge="1" parent="1" source="_D-FjPjcb8cLJCChwa4u-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="_D-FjPjcb8cLJCChwa4u-2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_D-FjPjcb8cLJCChwa4u-1" parent="1" style="whiteSpace=wrap;html=1;rounded=1;" value="VIDEO LUẬT SƯ CHIẾN : TRANH CHẤP ĐẤT FLOW" vertex="1">
+          <mxGeometry height="110" width="240" x="320" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="_D-FjPjcb8cLJCChwa4u-2" parent="1" style="whiteSpace=wrap;html=1;rounded=1;" value="&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;FLOW LÀM VIỆC&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;ol&gt;&lt;li style=&quot;&quot;&gt;Thu thập chứng cứ của đối phương , chưa có sổ đỏ cũng như giấy chứng nhận sử dụng đất của đối phương thì - Phi đơn ra xã để xã phường yêu cầu bên kia , mình sao chụp hồ sơ bên kia ra là lấy được chứng cứ&lt;/li&gt;&lt;li&gt;Hòa giải ở xã, chỉ cần lấy hòa giải&amp;nbsp; không thành - làm đơn đề nghị yêu cầu giải quyết - người đề nghị, người bị đề nghị, nội dung đề nghị, đề nghị phường hòa giải để có căn cứ tại tòa&amp;nbsp;&lt;/li&gt;&lt;li&gt;Phải gửi nhiều lần 2 lần mỗi tuần , để lấy phản hồi triệu tập, yêu cầu bên kia lên, không lên thì lập biên bản hòa giải không thành , lúc đó đủ đk khởi kiện tại tòa - đủ đk rồi thì TỐ TỤNG&lt;/li&gt;&lt;/ol&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="220" width="380" x="600" y="420" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
